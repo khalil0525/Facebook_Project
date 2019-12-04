@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <style>
+        -fx-padding: 10;
+        -fx-border-style: solid inside;
+        -fx-border-width: 2;
+        -fx-border-insets: 5;
+        -fx-border-radius: 5;
+        -fx-border-color: blue;
+    </style>
+  <tabs>
+    <Tab text="Profile">
+      <content>
+        <AnchorPane>
+               <children>
+                  <Label fx:id="nameID" layoutX="221.0" layoutY="177.0" text="Name" />
+                  <ImageView fx:id="avatarID" fitHeight="110.0" fitWidth="150.0" layoutX="50.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="locationID" layoutX="221.0" layoutY="221.0" text="Location" />
+                  <ImageView fx:id="fblogoID" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                     <image>
+                        <Image url="@sample/photos/fb%20logo.png" />
+                     </image>
+                  </ImageView>
+                  <ChoiceBox fx:id="choiceID" layoutX="390.0" layoutY="300.0" prefWidth="150.0" />
+
+                  <Label layoutX="270.0" layoutY="300.0" text="Currently Viewing As:" />
+
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Friends">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="list1ID" layoutX="16.0" layoutY="29.0" prefHeight="314.0" prefWidth="568.0" />
+                  <Label fx:id="view1ID" layoutX="16.0" layoutY="6.0" text="Currently Viewing As:" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="People">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+
+               <children>
+                  <ListView fx:id="list2ID" layoutX="16.0" layoutY="29.0" prefHeight="314.0" prefWidth="568.0" />
+                  <Label fx:id="view2ID" layoutX="16.0" layoutY="6.0" text="Currently Viewing As:" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
